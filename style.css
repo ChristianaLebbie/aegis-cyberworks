@@ -165,10 +165,6 @@ footer { padding:48px 0 24px; border-top:1px solid var(--line); }
 .hero-photos::after { content:""; position:absolute; inset:0; background:linear-gradient(90deg,var(--bg) 4%,transparent 76%),linear-gradient(0deg,var(--bg),transparent 35%); }
 .hero-brand { margin:0 0 .75rem; }
 .hero-media { position:relative; padding-bottom:1.5rem; }
-.experience-badge { position:absolute; right:0; bottom:0; display:flex; align-items:center; gap:.75rem; padding:.75rem 1rem; background:var(--bar); backdrop-filter:blur(20px); border:1px solid var(--line); border-radius:16px; box-shadow:0 8px 30px #0002; }
-.experience-badge strong { display:block; color:var(--accent); font:700 1.8rem/1.1 "Space Grotesk",Inter,sans-serif; }
-.experience-badge span { display:block; color:var(--text); line-height:1.35; font-size:.875rem; }
-.award-icon { object-fit:contain; }
 .topic-icon { width:48px; height:48px; object-fit:contain; margin-bottom:.65rem; display:block; }
 .drawn-icon { color:var(--accent); }
 .service-row h2 .topic-icon { margin-bottom:.5rem; }
@@ -185,10 +181,7 @@ footer { padding:48px 0 24px; border-top:1px solid var(--line); }
   .hero-media { padding-bottom:2rem; }
   .service-row h2 .topic-icon { margin-inline:auto; }
 }
-@media (max-width:540px) {
-  .experience-badge { padding:.55rem .75rem; }
-  .award-icon { width:36px; height:36px; }
-}
+
 .consultation-banner { background:linear-gradient(color-mix(in srgb,var(--bg) 87%,transparent),color-mix(in srgb,var(--bg) 87%,transparent)),url('media/aegis-cta-banner-bg.jpeg') center/cover; }
 .hero-description { margin-bottom:.4rem; }
 .hero-intro { max-width:32rem; margin:0 0 2rem; }
@@ -274,4 +267,21 @@ footer { padding:48px 0 24px; border-top:1px solid var(--line); }
   .featured-services,#services .service-wide,#services .service-reversed { grid-template-columns:1fr; }
   #services .service-reversed .featured-service-media { grid-column:auto; grid-row:auto; }
   #services .service-wide .featured-service-media > img { min-height:0; }
+}
+#testimonials .carousel-cards { overflow-x:hidden; }
+.review .portrait { border:2px solid var(--paper); outline:2px solid #3b82f6; outline-offset:1px; }
+@media(prefers-reduced-motion:no-preference) {
+  .hero .metrics > div { animation:hero-metric-in .85s cubic-bezier(.16,1,.3,1) both; }
+  .hero .metrics > div:nth-child(2) { animation-delay:.2s; }
+  .hero .metrics > div:nth-child(3) { animation-delay:.4s; }
+}
+@keyframes hero-metric-in {
+  from { opacity:0; transform:translateY(8px); }
+  to { opacity:1; transform:translateY(0); }
+}
+@media(prefers-reduced-motion:reduce) {
+  #testimonials .carousel-cards { grid-auto-flow:row; grid-auto-columns:auto; grid-template-columns:repeat(2,minmax(0,1fr)); overflow:visible; }
+}
+@media(prefers-reduced-motion:reduce) and (max-width:700px) {
+  #testimonials .carousel-cards { grid-template-columns:1fr; }
 }
