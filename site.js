@@ -68,23 +68,40 @@ inquiry?.addEventListener('submit', (event) => {
 
 const articleSearch = document.querySelector('#article-search');
 if (articleSearch) {
-  const filter = articleSearch.querySelector('input');
+  const form = articleSearch.querySelector('form');
+  const filter = form.querySelector('input');
   const status = articleSearch.querySelector('[role="status"]');
-  const cards = [...document.querySelectorAll('#latest .media-card, #archive .media-card')];
-  const sections = [...document.querySelectorAll('#latest, #archive')];
-  articleSearch.hidden = false;
-  filter.addEventListener('input', () => {
-    const query = filter.value.toLowerCase().trim();
+  const sections = [...document.querySelectorAll('.article-feed-section')];
+  const cards = [...document.querySelectorAll('#article-results .media-card')].map((card) => ({
+    element: card,
+    searchText: ((card.dataset.keywords || '') + ' ' + card.textContent).toLowerCase(),
+  }));
+
+  function updateArticleResults() {
+    const terms = filter.value.toLowerCase().trim().split(/\s+/).filter(Boolean);
     let matches = 0;
-    for (const card of cards) {
-      card.hidden = !card.textContent.toLowerCase().includes(query);
-      if (!card.hidden) matches += 1;
+    for (const { element, searchText } of cards) {
+      element.hidden = !terms.every((term) => searchText.includes(term));
+      if (!element.hidden) matches += 1;
     }
     for (const section of sections) {
       section.hidden = !section.querySelector('.media-card:not([hidden])');
     }
-    status.textContent = query ? matches + (matches === 1 ? ' article found' : ' articles found') : '';
+    status.textContent = terms.length ? matches + (matches === 1 ? ' article found' : ' articles found') : '';
+  }
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const url = new URL(location.href);
+    const query = filter.value.trim();
+    if (query) url.searchParams.set('q', query);
+    else url.searchParams.delete('q');
+    try { history.replaceState(null, '', url); } catch {}
+    updateArticleResults();
   });
+  filter.addEventListener('input', updateArticleResults);
+  filter.value = new URLSearchParams(location.search).get('q') || '';
+  updateArticleResults();
 }
 
 const slideMotion = matchMedia('(prefers-reduced-motion: reduce)');
