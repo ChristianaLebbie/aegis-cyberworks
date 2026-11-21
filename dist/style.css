@@ -259,7 +259,6 @@ footer { padding:48px 0 24px; border-top:1px solid var(--line); }
 #services .service-wide .featured-service-media > img { height:100%; min-height:260px; }
 #services .service-reversed { grid-template-columns:minmax(0,1fr) minmax(0,1.2fr); }
 #services .service-reversed .featured-service-media { grid-column:2; grid-row:1; }
-.service-illustration { position:absolute; right:12px; bottom:12px; width:clamp(72px,14%,105px); padding:4px; background:var(--bar); backdrop-filter:blur(16px); border:1px solid var(--line); border-radius:14px; pointer-events:none; }
 @media(max-width:740px) {
   .featured-services,#services .service-wide,#services .service-reversed { grid-template-columns:1fr; }
   #services .service-reversed .featured-service-media { grid-column:auto; grid-row:auto; }
@@ -333,4 +332,35 @@ footer { padding:48px 0 24px; border-top:1px solid var(--line); }
   0% { transform:scale(1.065) translate(-1.1%,.5%) rotate(-.6deg); }
   48% { transform:scale(1.09) translate(.3%,-.7%) rotate(.25deg); }
   100% { transform:scale(1.065) translate(1.1%,.45%) rotate(.6deg); }
+}
+.service-showcase {
+  --text:#f1f5f9;
+  --muted:#d3deee;
+  --accent:#6ee7d0;
+  --line:#2a3b55;
+  --paper:#142139;
+  color:var(--text);
+  background:radial-gradient(ellipse at 18% 6%,#172847,transparent 50%),#0b1426;
+}
+.service-showcase a { text-decoration:none; }
+.service-showcase .service-details-link {
+  display:inline-flex;
+  min-height:44px;
+  align-items:center;
+  padding:.45rem .85rem;
+  border:1px solid var(--line);
+  border-radius:10px;
+  font-weight:600;
+}
+.service-showcase .service-details-link:hover { border-color:var(--accent); background:rgb(110 231 208 / .08); }
+#services .service-wide .featured-service-copy h3 { font-size:clamp(1.55rem,3vw,2.4rem); }
+#services .service-wide p { max-width:32rem; }
+.agency-photos { overflow:hidden; border-radius:24px; }
+@media(prefers-reduced-motion:no-preference) {
+  .moving-service-media > img,.agency-photos.photos-ready > img { animation:service-photo-drift 5s ease-in-out infinite alternate; }
+  .service-reversed .moving-service-media > img { animation-delay:-2s; }
+}
+@keyframes service-photo-drift {
+  from { transform:scale(1.055) translateX(-1%) rotate(-.35deg); }
+  to { transform:scale(1.095) translateX(1%) rotate(.35deg); }
 }
