@@ -400,3 +400,12 @@ footer { padding:48px 0 24px; border-top:1px solid var(--line); }
 @media(prefers-reduced-motion:reduce) and (max-width:700px) {
   #featured-projects .carousel-cards { grid-template-columns:1fr; }
 }
+.service-detail-heading .topic-icon { margin:0 auto 1rem; }
+.service-feature-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; margin:1.5rem 0; }
+.service-feature { padding:clamp(1rem,2.5vw,1.45rem); }
+.service-feature .ctf-glyph { margin-bottom:.65rem; }
+.service-feature h3 { font-size:1.15rem; }
+.service-feature p { margin-bottom:0; }
+.service-related { margin-top:2rem; padding-top:1.5rem; border-top:1px solid var(--line); }
+.service-related ul { margin:.85rem 0; padding-left:1.25rem; }
+@media(max-width:620px) { .service-feature-grid { grid-template-columns:1fr; } }
