@@ -124,7 +124,7 @@ for (const carousel of document.querySelectorAll('[data-carousel]')) {
   function schedule() {
     clearInterval(timer);
     if (visible && !slideMotion.matches && !document.hidden && !hovering && !carousel.contains(document.activeElement)) {
-      timer = setInterval(advance, 5500);
+      timer = setInterval(advance, photos ? 1000 : 5500);
     }
   }
 
