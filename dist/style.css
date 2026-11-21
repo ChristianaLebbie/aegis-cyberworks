@@ -255,3 +255,23 @@ footer { padding:48px 0 24px; border-top:1px solid var(--line); }
   .hero-photos.photos-ready img,.agency-photos.photos-ready img { transition:none; }
 }
 .process-line { display:block; max-width:min(100%,720px); height:auto; margin:0 auto 1.5rem; }
+.featured-services { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.featured-services .illustrated-service,.illustrated-service { display:flex; flex-direction:column; align-items:stretch; padding:0; overflow:hidden; }
+.featured-service-media { position:relative; background:var(--paper); overflow:hidden; }
+.featured-service-media > img { display:block; width:100%; aspect-ratio:16/9; object-fit:cover; }
+.featured-service-copy { display:flex; flex:1; flex-direction:column; align-items:flex-start; padding:clamp(1.25rem,3vw,2rem); }
+.featured-service-copy h3 { font-size:clamp(1.25rem,2.5vw,1.65rem); }
+.featured-service-copy h3 a,.featured-service-copy h2 a { color:var(--text); }
+.featured-service-copy h3 a:hover,.featured-service-copy h2 a:hover { color:var(--accent); }
+#services .service-wide { grid-column:1/-1; display:grid; grid-template-columns:minmax(0,1.2fr) minmax(0,1fr); }
+#services .service-wide .featured-service-copy { justify-content:center; }
+#services .service-wide .service-details-link { margin-top:0; }
+#services .service-wide .featured-service-media > img { height:100%; min-height:260px; }
+#services .service-reversed { grid-template-columns:minmax(0,1fr) minmax(0,1.2fr); }
+#services .service-reversed .featured-service-media { grid-column:2; grid-row:1; }
+.service-illustration { position:absolute; right:12px; bottom:12px; width:clamp(72px,14%,105px); padding:4px; background:var(--bar); backdrop-filter:blur(16px); border:1px solid var(--line); border-radius:14px; pointer-events:none; }
+@media(max-width:740px) {
+  .featured-services,#services .service-wide,#services .service-reversed { grid-template-columns:1fr; }
+  #services .service-reversed .featured-service-media { grid-column:auto; grid-row:auto; }
+  #services .service-wide .featured-service-media > img { min-height:0; }
+}
