@@ -15,6 +15,23 @@ for (const container of document.querySelectorAll('[data-animation]')) {
     loop:true,
     autoplay:false
   });
+
+  if (container.classList.contains('network-service-motion')) {
+    container.animation.addEventListener('DOMLoaded', () => container.classList.add('is-ready'));
+    const media = container.parentElement;
+    media.addEventListener('pointermove', (event) => {
+      if (event.pointerType !== 'mouse' || reducedMotion.matches) return;
+      const rect = media.getBoundingClientRect();
+      const horizontal = (event.clientX - rect.left) / rect.width - .5;
+      const vertical = (event.clientY - rect.top) / rect.height - .5;
+      container.style.setProperty('--network-x', (-vertical * 10) + 'deg');
+      container.style.setProperty('--network-y', (horizontal * 10) + 'deg');
+    }, { passive:true });
+    media.addEventListener('pointerleave', () => {
+      container.style.removeProperty('--network-x');
+      container.style.removeProperty('--network-y');
+    });
+  }
   observer.observe(container);
 }
 reducedMotion.addEventListener('change', () => {
@@ -23,4 +40,3 @@ reducedMotion.addEventListener('change', () => {
     observer.observe(container);
   }
 });
-
