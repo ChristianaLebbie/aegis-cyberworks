@@ -128,7 +128,7 @@ for (const carousel of document.querySelectorAll('[data-carousel]')) {
     }
   }
 
-  if (!photos) {
+  if (!photos && carousel.id !== 'testimonials') {
     track.addEventListener('mouseenter', () => { hovering = true; schedule(); });
     track.addEventListener('mouseleave', () => { hovering = false; schedule(); });
     carousel.addEventListener('focusin', schedule);
