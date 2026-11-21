@@ -87,58 +87,58 @@ if (articleSearch) {
   });
 }
 
-
 const slideMotion = matchMedia('(prefers-reduced-motion: reduce)');
+
 for (const carousel of document.querySelectorAll('[data-carousel]')) {
   const track = carousel.querySelector('[data-carousel-track]');
-  const controls = carousel.querySelector('[data-carousel-controls]');
-  const pause = controls.querySelector('[data-carousel-pause]');
-  const photoMode = carousel.dataset.carousel === 'photos';
-  const manual = carousel.hasAttribute('data-manual');
   const slides = [...track.children];
-  let activePhoto = 0;
-  let timer;
-  let paused = slideMotion.matches;
+  if (slides.length < 2) continue;
+
+  const photos = carousel.dataset.carousel === 'photos';
+  let active = 0;
   let visible = false;
   let hovering = false;
+  let timer;
 
-  function advance(direction) {
-    if (photoMode) {
-      slides[activePhoto].hidden = true;
-      activePhoto = (activePhoto + direction + slides.length) % slides.length;
-      slides[activePhoto].hidden = false;
+  if (photos) {
+    slides[0].classList.add('current-photo');
+    for (const slide of slides) slide.hidden = false;
+    track.classList.add('photos-ready');
+  }
+
+  function advance() {
+    if (photos) {
+      slides[active].classList.remove('current-photo');
+      active = (active + 1) % slides.length;
+      slides[active].classList.add('current-photo');
       return;
     }
-    const maximum = track.scrollWidth - track.clientWidth;
+
+    const max = track.scrollWidth - track.clientWidth;
+    if (max <= 0) return;
     const step = slides[1].offsetLeft - slides[0].offsetLeft;
-    const position = track.scrollLeft;
-    let target = position + direction * step;
-    if (direction > 0 && position >= maximum - 2) target = 0;
-    if (direction < 0 && position <= 2) target = maximum;
-    track.scrollTo({ left: Math.max(0, Math.min(target, maximum)), behavior: slideMotion.matches ? 'instant' : 'smooth' });
+    const next = track.scrollLeft >= max - 4 ? 0 : Math.min(track.scrollLeft + step, max);
+    track.scrollTo({ left: next, behavior: 'smooth' });
   }
 
   function schedule() {
     clearInterval(timer);
-    pause.textContent = paused ? 'Play' : 'Pause';
-    if (!manual && visible && !paused && !document.hidden && !hovering && !carousel.contains(document.activeElement)) {
-      timer = setInterval(() => advance(1), 5500);
+    if (visible && !slideMotion.matches && !document.hidden && !hovering && !carousel.contains(document.activeElement)) {
+      timer = setInterval(advance, 5500);
     }
   }
 
-  controls.hidden = false;
-  pause.hidden = manual;
-  controls.querySelector('[data-carousel-prev]').addEventListener('click', () => advance(-1));
-  controls.querySelector('[data-carousel-next]').addEventListener('click', () => advance(1));
-  pause.addEventListener('click', () => { paused = !paused; schedule(); });
-  carousel.addEventListener('focusin', schedule);
-  carousel.addEventListener('focusout', () => setTimeout(schedule, 0));
-  if (!photoMode) {
+  if (!photos) {
     track.addEventListener('mouseenter', () => { hovering = true; schedule(); });
     track.addEventListener('mouseleave', () => { hovering = false; schedule(); });
+    carousel.addEventListener('focusin', schedule);
+    carousel.addEventListener('focusout', () => setTimeout(schedule, 0));
   }
+
   document.addEventListener('visibilitychange', schedule);
-  slideMotion.addEventListener('change', () => { if (slideMotion.matches) paused = true; schedule(); });
-  new IntersectionObserver(([entry]) => { visible = entry.isIntersecting; schedule(); }).observe(carousel);
-  schedule();
+  slideMotion.addEventListener('change', schedule);
+  new IntersectionObserver(([entry]) => {
+    visible = entry.isIntersecting;
+    schedule();
+  }).observe(carousel);
 }
