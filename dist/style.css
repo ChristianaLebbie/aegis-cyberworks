@@ -409,3 +409,32 @@ footer { padding:48px 0 24px; border-top:1px solid var(--line); }
 .service-related { margin-top:2rem; padding-top:1.5rem; border-top:1px solid var(--line); }
 .service-related ul { margin:.85rem 0; padding-left:1.25rem; }
 @media(max-width:620px) { .service-feature-grid { grid-template-columns:1fr; } }
+.page-heading:not(.about-heading,.ctf-heading,.profile-heading,.services-heading),
+.image-heading:not(.services-heading) {
+  background:linear-gradient(100deg,rgba(9,19,36,.92),rgba(12,26,45,.74)),url('media/aegis-page-banner.jpg') center/cover;
+  color:#f1f5f9;
+}
+.image-heading {
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  color:#f1f5f9;
+}
+.image-heading p,.page-heading:not(.about-heading,.ctf-heading,.profile-heading) p { color:#e1eaf6; }
+.services-heading { background:#0d192b; }
+.heading-photos { position:absolute; inset:0; z-index:-1; }
+.heading-photos > img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 42%; }
+.heading-photos::after { content:""; position:absolute; inset:0; background:linear-gradient(100deg,rgba(9,19,36,.91),rgba(12,26,45,.7)); }
+.heading-photos.photos-ready > img { opacity:0; transition:opacity .45s ease; }
+.heading-photos.photos-ready > .current-photo { opacity:1; }
+.team-heading-portraits { display:flex; justify-content:center; flex-wrap:wrap; gap:clamp(.5rem,2vw,1rem); margin-top:1.65rem; }
+.team-heading-portraits a { display:block; border-radius:50%; }
+.team-heading-portraits img { display:block; width:clamp(42px,11vw,70px); height:auto; aspect-ratio:1; object-fit:cover; object-position:center 25%; border:2px solid #a4b9fa; border-radius:50%; }
+.team-heading-portraits a:hover img,.team-heading-portraits a:focus-visible img { border-color:#d6fa52; }
+.faq-feature { background:url('media/aegis-top-shape.png') right top / clamp(150px,24vw,320px) auto no-repeat,url('media/aegis-left-bottom-shape.png') left bottom / clamp(150px,24vw,320px) auto no-repeat,var(--bg); }
+.faq-layout { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.1fr); gap:clamp(1.5rem,5vw,4rem); align-items:center; }
+.faq-image { display:block; width:100%; height:auto; border-radius:22px; box-shadow:0 18px 50px #08142925; }
+.faq-questions h2 { margin:.6rem 0 1.6rem; }
+.faq-questions details[open] { border-color:var(--accent); }
+@media(max-width:760px) { .faq-layout { grid-template-columns:1fr; } .faq-image { max-width:540px; margin-inline:auto; } }
+@media(prefers-reduced-motion:reduce) { .heading-photos.photos-ready > img { transition:none; } }
