@@ -145,7 +145,7 @@ for (const carousel of document.querySelectorAll('[data-carousel]')) {
     }
   }
 
-  if (!photos && carousel.id !== 'testimonials') {
+  if (!photos && carousel.id !== 'testimonials' && carousel.id !== 'cyber-advocacy') {
     track.addEventListener('mouseenter', () => { hovering = true; schedule(); });
     track.addEventListener('mouseleave', () => { hovering = false; schedule(); });
     carousel.addEventListener('focusin', schedule);
