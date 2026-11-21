@@ -65,3 +65,36 @@ inquiry?.addEventListener('submit', (event) => {
   location.href = 'mailto:info@aegiscyberworks.com?subject=' + subject + '&body=' + body;
 });
 
+
+const photoToggle = document.querySelector('.hero-photo-toggle');
+if (photoToggle) {
+  const photos = [...document.querySelectorAll('.hero-photos img')];
+  let activePhoto = 0;
+  photoToggle.hidden = false;
+  photoToggle.addEventListener('click', () => {
+    photos[activePhoto].hidden = true;
+    activePhoto = (activePhoto + 1) % photos.length;
+    photos[activePhoto].hidden = false;
+  });
+}
+
+const articleSearch = document.querySelector('#article-search');
+if (articleSearch) {
+  const filter = articleSearch.querySelector('input');
+  const status = articleSearch.querySelector('[role="status"]');
+  const cards = [...document.querySelectorAll('#latest .media-card, #archive .media-card')];
+  const sections = [...document.querySelectorAll('#latest, #archive')];
+  articleSearch.hidden = false;
+  filter.addEventListener('input', () => {
+    const query = filter.value.toLowerCase().trim();
+    let matches = 0;
+    for (const card of cards) {
+      card.hidden = !card.textContent.toLowerCase().includes(query);
+      if (!card.hidden) matches += 1;
+    }
+    for (const section of sections) {
+      section.hidden = !section.querySelector('.media-card:not([hidden])');
+    }
+    status.textContent = query ? matches + (matches === 1 ? ' article found' : ' articles found') : '';
+  });
+}
