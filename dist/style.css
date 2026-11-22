@@ -561,6 +561,8 @@ footer { padding:48px 0 24px; border-top:1px solid var(--line); }
 }
 .hero-security-panel { position:absolute; right:0; bottom:8%; display:grid; gap:.13rem; min-width:136px; padding:.6rem .75rem .7rem; border:1px solid #49c9aa; border-radius:11px; background:#0c1d2c; color:#e6fff7; font-size:.72rem; line-height:1.32; box-shadow:0 10px 28px #07182038; pointer-events:none; }
 .hero-security-panel strong { font-size:.83rem; }
+.hero-security-title { display:flex; align-items:center; gap:.4rem; }
+.hero-security-title svg { flex:none; color:#68efcc; }
 .hero-security-panel span::before { content:""; display:inline-block; width:.36rem; height:.36rem; margin-inline-end:.4rem; border-radius:50%; background:#00d4aa; vertical-align:.08em; }
 .hero-security-bits { color:#91e2cb; font-family:ui-monospace,monospace; letter-spacing:.035em; margin:.13rem 0 .24rem; }
 .hero-security-scan { height:2px; margin-top:.28rem; background:linear-gradient(90deg,#00d4aa,#3b82f6); transform-origin:left; }
