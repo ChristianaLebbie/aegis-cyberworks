@@ -159,3 +159,46 @@ for (const carousel of document.querySelectorAll('[data-carousel]')) {
     schedule();
   }).observe(carousel);
 }
+
+const routes = {
+  about:'about', services:'services', team:'team', news:'news', faq:'faq', ctf:'ctf', contact:'contact',
+  consulting:'services', pentest:'services', mentorship:'services', vulnerability_assessment:'services',
+  cti:'services', training:'services', virtual_ciso:'services', audits:'services',
+  'anti-surveillance':'services', edr:'services', projects:'services', pricing:'services',
+  cybertips:'news', 'government-notification-phishing':'news', 'microsoft-zero-day-brief':'news',
+  'cloud-storage-privacy':'news', 'ai-malware-defense':'news',
+};
+const pageRoute = location.pathname.split('/').filter(Boolean).pop()?.replace(/\.html$/i,'') || 'index';
+const navLinks = [...document.querySelectorAll('#navigation a, header .header-actions a')];
+const homepageSections = [
+  ['about-aegis','about'], ['services','services'], ['news-feed','news'], ['get-in-touch','contact']
+].map(([id,route]) => ({ element:document.getElementById(id),route })).filter(({element})=>element);
+let lastRoute;
+function highlightNavigation() {
+  let active = routes[pageRoute] || (pageRoute.startsWith('team-details') ? 'team' : pageRoute.startsWith('news-details') ? 'news' : 'index');
+  if (pageRoute === 'index') {
+    const current = homepageSections.find(({element})=>{
+      const {top,bottom} = element.getBoundingClientRect();
+      const readingLine = Math.min(180,innerHeight * .33);
+      return top <= readingLine && bottom > readingLine;
+    });
+    active = current?.route || 'index';
+  }
+  if (lastRoute === active) return;
+  lastRoute = active;
+  for (const link of navLinks) {
+    const route = link.getAttribute('href').replace(/\.html$/i,'');
+    if (route === active) link.setAttribute('aria-current', route === pageRoute ? 'page' : 'location');
+    else link.removeAttribute('aria-current');
+  }
+}
+highlightNavigation();
+if (pageRoute === 'index') {
+  let scheduled = false;
+  addEventListener('scroll', () => {
+    if (scheduled) return;
+    scheduled = true;
+    requestAnimationFrame(() => { scheduled = false; highlightNavigation(); });
+  }, {passive:true});
+  addEventListener('resize', highlightNavigation);
+}
