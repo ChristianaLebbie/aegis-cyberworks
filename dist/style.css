@@ -554,3 +554,16 @@ footer { padding:48px 0 24px; border-top:1px solid var(--line); }
 .about-checklist li { display:grid; grid-template-columns:1.2rem minmax(0,1fr); align-items:baseline; gap:.45rem; }
 .about-checklist li::before { content:""; width:.75rem; height:.42rem; border:solid var(--accent); border-width:0 0 2px 2px; transform:translateY(-.12em) rotate(-45deg); }
 @media(prefers-reduced-motion:reduce) { .agency-photos.photos-ready > .agency-slide { transition:none; } }
+#navigation a[aria-current],header .header-actions a[aria-current] { color:var(--accent); background:color-mix(in srgb,var(--accent) 15%,var(--paper)); box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--accent) 40%,transparent); font-weight:700; }
+.community-card:is(:hover,:focus-within,:active),.illustrated-service:is(:hover,:focus-within,:active),.project-tile:is(:hover,:focus-within,:active) {
+  border-color:var(--accent);
+  box-shadow:0 0 0 2px color-mix(in srgb,var(--accent) 28%,transparent);
+}
+.hero-security-panel { position:absolute; right:0; bottom:8%; display:grid; gap:.13rem; min-width:136px; padding:.6rem .75rem .7rem; border:1px solid #49c9aa; border-radius:11px; background:#0c1d2c; color:#e6fff7; font-size:.72rem; line-height:1.32; box-shadow:0 10px 28px #07182038; pointer-events:none; }
+.hero-security-panel strong { font-size:.83rem; }
+.hero-security-panel span::before { content:""; display:inline-block; width:.36rem; height:.36rem; margin-inline-end:.4rem; border-radius:50%; background:#00d4aa; vertical-align:.08em; }
+.hero-security-bits { color:#91e2cb; font-family:ui-monospace,monospace; letter-spacing:.035em; margin:.13rem 0 .24rem; }
+.hero-security-scan { height:2px; margin-top:.28rem; background:linear-gradient(90deg,#00d4aa,#3b82f6); transform-origin:left; }
+@media(prefers-reduced-motion:no-preference) { .hero-security-scan { animation:hero-review 2s ease-in-out infinite alternate; } }
+@keyframes hero-review { from { transform:scaleX(.3); } to { transform:scaleX(1); } }
+@media(max-width:540px) { .hero-security-panel { bottom:5%; padding:.44rem .6rem; min-width:0; } }
