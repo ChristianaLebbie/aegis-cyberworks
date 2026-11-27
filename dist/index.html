@@ -1,30 +1,919 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Cybersecurity services, training and consulting in Freetown, Sierra Leone."><title>Aegis CyberWorks</title><script>try{document.documentElement.dataset.theme=localStorage.getItem("aegis-theme")||""}catch{}</script><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"><link rel="stylesheet" href="style.css"><script defer src="site.js"></script><script defer src="media/lottie.min.js"></script><script defer src="media/animations.js"></script><script defer src="animations.js"></script></head>
-<body><a class="skip" href="#main">Skip to content</a><header><div class="wrap bar"><a href="index.html" class="brand"><img src="media/aegis-logo.png" width="44" alt="Aegis CyberWorks"></a><nav id="navigation" aria-label="Main navigation"><a href="index.html" aria-current="page">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="team.html">Team</a><a href="news.html">Articles</a><a href="faq.html">FAQ</a><a href="ctf.html">CTFs</a><a class="mobile-contact" href="contact.html">Get in Touch</a></nav><div class="header-actions"><button id="theme" class="icon-btn" aria-label="Switch color theme" type="button"></button><a class="button small" href="contact.html">Get in Touch</a><button id="menu" class="icon-btn menu" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation" type="button">☰</button></div></div></header>
-<main id="main"><section class="hero" data-carousel="photos" aria-label="Aegis homepage photos"><div class="hero-photos" data-carousel-track aria-hidden="true"><img src="media/aegis-home-slide1.jpg" alt="" fetchpriority="high"><img src="media/aegis-home-slide2.jpeg" alt="" hidden></div><div class="wrap hero-layout"><div class="hero-copy"><p class="chip">Cybersecurity · Consulting · Training</p><p class="hero-brand">Partner with us at</p><h1>Aegis <span class="gradient">CyberWorks</span></h1><p class="hero-description">Your Cybersecurity Solutions Partner</p><p class="hero-intro">Find security gaps, train your team, and protect your business with Aegis CyberWorks.</p><div class="actions"><a class="button" href="#services">Explore Services</a><a class="button outline" href="contact.html">Get Consultation</a></div><div class="metrics"><div><strong>100+</strong><span>Collective Years of Experience</span></div><div><strong>9+</strong><span>Cybersecurity Services</span></div><div><strong>24/7</strong><span>Support</span></div></div></div><div class="hero-media"><div class="animation hero-art" data-animation="hero" aria-hidden="true"></div><div class="hero-security-panel" aria-hidden="true"><div class="hero-security-title"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3 8 8 11 5-3 8-6 8-11V5l-8-3z"/><path d="m8.5 12 2.3 2.3 4.7-5"/></svg><strong>Security testing</strong></div><div class="hero-security-bits">01010&nbsp; 10101&nbsp; 00110</div><span>Network traffic analysis</span><span>Endpoint protection check</span><div class="hero-security-scan"></div></div></div></div></section>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Cybersecurity services, training and consulting in Freetown, Sierra Leone."
+    />
+    <title>Aegis CyberWorks</title>
+    <script>
+      try {
+        document.documentElement.dataset.theme =
+          localStorage.getItem("aegis-theme") || "";
+      } catch {}
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="site.js"></script>
+    <script defer src="media/lottie.min.js"></script>
+    <script defer src="media/animations.js"></script>
+    <script defer src="animations.js"></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header>
+      <div class="wrap bar">
+        <a href="index.html" class="brand"
+          ><img src="media/aegis-logo.png" width="44" alt="Aegis CyberWorks"
+        /></a>
+        <nav id="navigation" aria-label="Main navigation">
+          <a href="index.html" aria-current="page">Home</a
+          ><a href="about.html">About</a><a href="services.html">Services</a
+          ><a href="team.html">Team</a><a href="news.html">Articles</a
+          ><a href="faq.html">FAQ</a><a href="ctf.html">CTFs</a
+          ><a class="mobile-contact" href="contact.html">Get in Touch</a>
+        </nav>
+        <div class="header-actions">
+          <button
+            id="theme"
+            class="icon-btn"
+            aria-label="Switch color theme"
+            type="button"
+          ></button
+          ><a class="button small" href="contact.html">Get in Touch</a
+          ><button
+            id="menu"
+            class="icon-btn menu"
+            aria-controls="navigation"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            type="button"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+    </header>
+    <main id="main">
+      <section
+        class="hero"
+        data-carousel="photos"
+        aria-label="Aegis homepage photos"
+      >
+        <div class="hero-photos" data-carousel-track aria-hidden="true">
+          <img
+            src="media/aegis-home-slide1.jpg"
+            alt=""
+            fetchpriority="high"
+          /><img src="media/aegis-home-slide2.jpeg" alt="" hidden />
+        </div>
+        <div class="wrap hero-layout">
+          <div class="hero-copy">
+            <p class="chip">Cybersecurity · Consulting · Training</p>
+            <p class="hero-brand">Partner with us at</p>
+            <h1>Aegis <span class="gradient">CyberWorks</span></h1>
+            <p class="hero-description">Your Cybersecurity Solutions Partner</p>
+            <p class="hero-intro">
+              Find security gaps, train your team, and protect your business
+              with Aegis CyberWorks.
+            </p>
+            <div class="actions">
+              <a class="button" href="#services">Explore Services</a
+              ><a class="button outline" href="contact.html"
+                >Get Consultation</a
+              >
+            </div>
+            <div class="metrics">
+              <div>
+                <strong>100+</strong><span>Collective Years of Experience</span>
+              </div>
+              <div><strong>9+</strong><span>Cybersecurity Services</span></div>
+              <div><strong>24/7</strong><span>Support</span></div>
+            </div>
+          </div>
+          <div class="hero-media">
+            <div
+              class="animation hero-art"
+              data-animation="hero"
+              aria-hidden="true"
+            ></div>
+            <div class="hero-security-panel" aria-hidden="true">
+              <div class="hero-security-title">
+                <svg
+                  width="19"
+                  height="19"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 2 4 5v6c0 5 3 8 8 11 5-3 8-6 8-11V5l-8-3z" />
+                  <path d="m8.5 12 2.3 2.3 4.7-5" /></svg
+                ><strong>Security testing</strong>
+              </div>
+              <div class="hero-security-bits">
+                01010&nbsp; 10101&nbsp; 00110
+              </div>
+              <span>Network traffic analysis</span
+              ><span>Endpoint protection check</span>
+              <div class="hero-security-scan"></div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-<section id="cyber-advocacy" class="block community-strip" data-carousel="cards" aria-labelledby="community-title"><div class="wrap"><div class="community-heading"><p class="chip">Community</p><h2 id="community-title">Cyber Advocacy and Education</h2></div><div class="grid carousel-cards community-track" data-carousel-track><article class="card community-card"><a href="mentorship.html"><img class="topic-icon" src="media/aegis-icons-solution.svg" alt="" width="48" height="48"><h3>Mentorship</h3><p>We help you protect, and grow with confidence.</p></a></article>
-<article class="card community-card"><a href="training.html"><img class="topic-icon" src="media/aegis-icons-coding.svg" alt="" width="48" height="48"><h3>Awareness &amp; Training</h3><p>Work with a security minded team.</p></a></article>
-<article class="card community-card"><a href="consulting.html"><img class="topic-icon" src="media/aegis-icons-mobile.png" alt="" width="48" height="48"><h3>Information Security Consultation</h3><p>Expert guidance to safeguard your business.</p></a></article>
-<article class="card community-card"><a href="cti.html"><img class="topic-icon" src="media/aegis-icons-ux-design.svg" alt="" width="48" height="48"><h3>CTI &amp; OSINT</h3><p>Work with standards that help protect your organisation.</p></a></article>
-<article class="card community-card"><a href="ctf.html"><img class="topic-icon" src="media/aegis-icons-coding.svg" alt="" width="48" height="48"><h3>Cyber Drills &amp; CTFs</h3><p>Work with a security minded team.</p></a></article></div></div></section>
-<section class="block" id="about-aegis"><div class="wrap contact-layout"><div class="about-picture"><div class="agency-carousel" data-carousel="photos" role="region" aria-label="About Aegis photos"><div class="agency-photos" data-carousel-track><div class="agency-slide"><img class="section-photo" src="media/aegis-about-img.jpg" loading="lazy" alt=""><div class="about-experience"><img src="media/aegis-icons-award.png" alt="" width="38" height="38"><div><strong>100+</strong><span>Collective Years of Experience</span></div></div></div><div class="agency-slide" hidden><img class="section-photo" src="media/aegis-about2.jpg" loading="lazy" alt=""></div></div></div></div><div><p class="chip">About Our Company</p><h2>Your Trusted Partner in Cyber Security Solution</h2><p>At Aegis CyberWorks, we are the partner of choice for many of the country’s leading enterprises, small and medium-sized businesses, and innovative tech disruptors. We specialize in empowering businesses by delivering cutting-edge cybersecurity solutions.</p><ul class="about-checklist" role="list"><li>Enterprise-grade cybersecurity services</li><li>High-speed and secure USB data handling</li><li>Seamless support across all major platforms and versions</li><li>Future proof solutions that adapt</li></ul><a href="about.html" class="button outline">Learn More</a></div></div></section>
-<section class="block service-showcase" id="services"><div class="wrap"><div class="centered section-intro"><p class="chip">Our Services</p><h2>We Offer a Wide Variety of Cyber Security Services</h2></div><div class="grid featured-services"><article class="card illustrated-service service-wide"><div class="featured-service-media moving-service-media"><img src="media/service-testing-illustration.jpg" loading="lazy" decoding="async" alt=""></div><div class="featured-service-copy"><img class="topic-icon" src="media/aegis-icons-desktop.png" alt="" width="48" height="48"><h3><a href="pentest.html">Penetration Testing</a></h3><p><b>Your Strongest Defense Starts Here.</b><br>We simulate real world attacks to find weaknesses before hackers do. Identify, test, and fix vulnerabilities.</p><a class="service-details-link" href="pentest.html">View service details</a></div></article>
-<article class="card illustrated-service service-wide service-reversed"><div class="featured-service-media moving-service-media"><img src="media/aegis-services-b2.jpg" loading="lazy" decoding="async" alt=""></div><div class="featured-service-copy"><img class="topic-icon" src="media/aegis-icons-mobile.png" alt="" width="48" height="48"><h3><a href="consulting.html">Information Security Consultation</a></h3><p><b>Expert guidance to safeguard your business.</b> <br>Expert advice and tailored strategies to secure your business and build lasting resilience.</p><a class="service-details-link" href="consulting.html">View service details</a></div></article>
-<article class="card illustrated-service service-wide"><div class="featured-service-media moving-service-media"><img src="media/service-assessment-illustration.jpg" loading="lazy" decoding="async" alt=""></div><div class="featured-service-copy"><img class="topic-icon" src="media/aegis-icons-ux.png" alt="" width="48" height="48"><h3><a href="vulnerability_assessment.html">Vulnerability Assessments</a></h3><p><b>Identify Risks Before Attackers Do.</b> <br> Uncover weaknesses, reduce risks, and stay ahead of threats.</p><a class="service-details-link" href="vulnerability_assessment.html">View service details</a></div></article>
-<article class="card illustrated-service service-wide service-reversed"><div class="featured-service-media network-service-media"><img src="media/service-threat-intelligence-v2.jpg" loading="lazy" decoding="async" alt=""><div class="animation network-service-motion" data-animation="network" aria-hidden="true"></div></div><div class="featured-service-copy"><img class="topic-icon" src="media/aegis-icons-qa.png" alt="" width="48" height="48"><h3><a href="cti.html">Threat Intelligence and OSINT</a></h3><p><b>Stay Ahead of Emerging Threats</b> <br>Transform intelligence into action with real-time insights on emerging threats.</p><a class="service-details-link" href="cti.html">View service details</a></div></article>
-<article class="card illustrated-service service-wide"><div class="featured-service-media moving-service-media"><img src="media/service-training-illustration.jpg" loading="lazy" decoding="async" alt=""></div><div class="featured-service-copy"><img class="topic-icon" src="media/aegis-icons-stock.png" alt="" width="48" height="48"><h3><a href="training.html">Cybersecurity Awareness and Training</a></h3><p><b>Empower Your Team.</b><br>Empower your team to be the strongest defense against cyber threats.</p><a class="service-details-link" href="training.html">View service details</a></div></article>
-<article class="card illustrated-service service-wide service-reversed"><div class="featured-service-media ciso-photo"><img src="media/aegis-services-b11.jpg" loading="lazy" decoding="async" alt=""></div><div class="featured-service-copy"><img class="topic-icon" src="media/aegis-icons-web.png" alt="" width="48" height="48"><h3><a href="virtual_ciso.html">Virtual CISO Services</a></h3><p><b>Protecting the Backbone of Your Business</b><br>Strategic security leadership without the cost of a full-time CISO.</p><a class="service-details-link" href="virtual_ciso.html">View service details</a></div></article></div><p class="centered"><a class="button outline" href="services.html">All Services</a></p></div></section>
-<section class="why block why-aegis"><div class="wrap"><div class="centered section-intro"><p class="why-label"><span aria-hidden="true">//</span> Why Choose Us</p><h2>Our Mission Is To Make Your Business Secure</h2></div><div class="why-layout"><div class="why-tiles"><button class="card tile" data-reason="0" type="button"><span aria-hidden="true"><img class="topic-icon" src="media/aegis-icons-system.svg" alt="" width="48" height="48"></span>Secure Systems Audit</button><button class="card tile" data-reason="1" type="button"><span aria-hidden="true"><img class="topic-icon" src="media/aegis-icons-team.svg" alt="" width="48" height="48"></span>Threat Alerts &amp; Advisories</button><button class="card tile" data-reason="2" type="button"><span aria-hidden="true"><img class="topic-icon" src="media/aegis-icons-desk.svg" alt="" width="48" height="48"></span>24/7 Supports</button><button class="card tile" data-reason="3" type="button"><span aria-hidden="true"><img class="topic-icon" src="media/aegis-icons-expert.svg" alt="" width="48" height="48"></span>Certified Experts</button></div><div id="reasons"><details name="accordion" open><summary><img class="summary-icon" src="media/aegis-icons-system.svg" alt="" width="48" height="48">Secure Systems Audit</summary><p>Design,audit, and maintain systems with security at the core.</p></details><details name="accordion"><summary><img class="summary-icon" src="media/aegis-icons-team.svg" alt="" width="48" height="48">Threat Alerts &amp; Advisories</summary><p>Stay ahead of cyber risks with timely alerts and guidance.</p></details><details name="accordion"><summary><img class="summary-icon" src="media/aegis-icons-desk.svg" alt="" width="48" height="48">24/7 Supports</summary><p>Round-the-clock support when you need it most.</p></details><details name="accordion"><summary><img class="summary-icon" src="media/aegis-icons-expert.svg" alt="" width="48" height="48">Certified Experts</summary><p>Work with certified professionals you can trust.</p></details></div></div></div></section>
-<section class="why block consultation-aegis"><div class="wrap centered"><h2>Delivering Cybersecurity Solutions That Enable You to Work Smarter</h2><p>Appropriate for your specific business, making it easy for you to have quality and Secure services.</p><a href="contact.html" class="button">Get Started</a></div></section>
-<section id="testimonials" class="block" data-carousel="cards" aria-label="Client testimonials"><div class="wrap"><div class="centered section-intro"><p class="chip">Testimonials</p><h2>Trusted by Our Clients</h2></div><p class="centered">At Aegis CyberWorks, we deliver trusted cybersecurity solutions that protect data, enhance IT performance, and earn our clients’ confidence.</p><div class="grid carousel-cards" data-carousel-track aria-label="Client testimonials slides"><figure class="card review"><div class="stars" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span></div><blockquote>“As CEO of Smart Start SL Ltd, I have been impressed with Aegis CyberWorks' professionalism, knowledge base and reliability. They provide excellent cybersecurity support and web services that keep our business secure, efficient and visible. Their team is responsive, knowledgeable, and truly committed to delivering value. I highly recommend them to any organization in need of trusted technology support.”</blockquote><figcaption><img class="portrait" src="media/aegis-blog-author1.jpg" loading="lazy" alt=""><span><strong>Patricia Olayemi Jangah</strong><small>CEO, Smart Start SL Ltd</small></span></figcaption></figure>
-<figure class="card review"><div class="stars" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span></div><blockquote>“I am delighted to offer this testimonial for Aegis CyberWorks, a trusted cybersecurity partner with whom we have worked closely for a few years. At Endwell Technology Solutions, our focus is on GPS installation services and specialized technical operations, and safeguarding the data and systems that power our devices is critical. Aegis CyberWorks has consistently provided the cybersecurity expertise, resilience, and innovative protection we need to operate securely. I highly recommend their services.”</blockquote><figcaption><img class="portrait" src="media/aegis-blog-author2.jpg" loading="lazy" alt=""><span><strong>Dennis O O Barber</strong><small>CEO, Endwell Technology Solutions</small></span></figcaption></figure>
-<figure class="card review"><div class="stars" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span></div><blockquote>“I'm genuinely impressed with the foundational work Aegis CyberWorks is doing to strengthen digital defenses across Sierra Leone. They don't just provide security; they are actively building national capacity by identifying and training local talent, which creates genuine, long-term digital resilience for the entire region. What I've experienced is that their managed services are technically comprehensive, and smartly tailored to the unique West African context. I can confidently endorse Aegis CyberWorks as a trusted, forward-thinking leader in both cybersecurity service and talent development.”</blockquote><figcaption><img class="portrait" src="media/aegis-blog-author3.jpg" loading="lazy" alt=""><span><strong>Jones Baraza</strong><small>Co-founder and CTO, CTFROOM LIMITED</small></span></figcaption></figure></div></div></section>
+      <section
+        id="cyber-advocacy"
+        class="block community-strip"
+        data-carousel="cards"
+        aria-labelledby="community-title"
+      >
+        <div class="wrap">
+          <div class="community-heading">
+            <p class="chip">Community</p>
+            <h2 id="community-title">Cyber Advocacy and Education</h2>
+          </div>
+          <div class="grid carousel-cards community-track" data-carousel-track>
+            <article class="card community-card">
+              <a href="mentorship.html"
+                ><img
+                  class="topic-icon"
+                  src="media/aegis-icons-solution.svg"
+                  alt=""
+                  width="48"
+                  height="48"
+                />
+                <h3>Mentorship</h3>
+                <p>We help you protect, and grow with confidence.</p></a
+              >
+            </article>
+            <article class="card community-card">
+              <a href="training.html"
+                ><img
+                  class="topic-icon"
+                  src="media/aegis-icons-coding.svg"
+                  alt=""
+                  width="48"
+                  height="48"
+                />
+                <h3>Awareness &amp; Training</h3>
+                <p>Work with a security minded team.</p></a
+              >
+            </article>
+            <article class="card community-card">
+              <a href="consulting.html"
+                ><img
+                  class="topic-icon"
+                  src="media/aegis-icons-mobile.png"
+                  alt=""
+                  width="48"
+                  height="48"
+                />
+                <h3>Information Security Consultation</h3>
+                <p>Expert guidance to safeguard your business.</p></a
+              >
+            </article>
+            <article class="card community-card">
+              <a href="cti.html"
+                ><img
+                  class="topic-icon"
+                  src="media/aegis-icons-ux-design.svg"
+                  alt=""
+                  width="48"
+                  height="48"
+                />
+                <h3>CTI &amp; OSINT</h3>
+                <p>
+                  Work with standards that help protect your organisation.
+                </p></a
+              >
+            </article>
+            <article class="card community-card">
+              <a href="ctf.html"
+                ><img
+                  class="topic-icon"
+                  src="media/aegis-icons-coding.svg"
+                  alt=""
+                  width="48"
+                  height="48"
+                />
+                <h3>Cyber Drills &amp; CTFs</h3>
+                <p>Work with a security minded team.</p></a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="block" id="about-aegis">
+        <div class="wrap contact-layout">
+          <div class="about-picture">
+            <div
+              class="agency-carousel"
+              data-carousel="photos"
+              role="region"
+              aria-label="About Aegis photos"
+            >
+              <div class="agency-photos" data-carousel-track>
+                <div class="agency-slide">
+                  <img
+                    class="section-photo"
+                    src="media/aegis-about-img.jpg"
+                    loading="lazy"
+                    alt=""
+                  />
+                  <div class="about-experience">
+                    <img
+                      src="media/aegis-icons-award.png"
+                      alt=""
+                      width="38"
+                      height="38"
+                    />
+                    <div>
+                      <strong>100+</strong
+                      ><span>Collective Years of Experience</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="agency-slide" hidden>
+                  <img
+                    class="section-photo"
+                    src="media/aegis-about2.jpg"
+                    loading="lazy"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p class="chip">About Our Company</p>
+            <h2>Your Trusted Partner in Cyber Security Solution</h2>
+            <p>
+              At Aegis CyberWorks, we are the partner of choice for many of the
+              country’s leading enterprises, small and medium-sized businesses,
+              and innovative tech disruptors. We specialize in empowering
+              businesses by delivering cutting-edge cybersecurity solutions.
+            </p>
+            <ul class="about-checklist" role="list">
+              <li>Enterprise-grade cybersecurity services</li>
+              <li>High-speed and secure USB data handling</li>
+              <li>Seamless support across all major platforms and versions</li>
+              <li>Future proof solutions that adapt</li>
+            </ul>
+            <a href="about.html" class="button outline">Learn More</a>
+          </div>
+        </div>
+      </section>
+      <section class="block service-showcase" id="services">
+        <div class="wrap">
+          <div class="centered section-intro">
+            <p class="chip">Our Services</p>
+            <h2>We Offer a Wide Variety of Cyber Security Services</h2>
+          </div>
+          <div class="grid featured-services">
+            <article class="card illustrated-service service-wide">
+              <div class="featured-service-media moving-service-media">
+                <img
+                  src="media/service-testing-illustration.jpg"
+                  loading="lazy"
+                  decoding="async"
+                  alt=""
+                />
+              </div>
+              <div class="featured-service-copy">
+                <img
+                  class="topic-icon"
+                  src="media/aegis-icons-desktop.png"
+                  alt=""
+                  width="48"
+                  height="48"
+                />
+                <h3><a href="pentest.html">Penetration Testing</a></h3>
+                <p>
+                  <b>Your Strongest Defense Starts Here.</b><br />We simulate
+                  real world attacks to find weaknesses before hackers do.
+                  Identify, test, and fix vulnerabilities.
+                </p>
+                <a class="service-details-link" href="pentest.html"
+                  >View service details</a
+                >
+              </div>
+            </article>
+            <article
+              class="card illustrated-service service-wide service-reversed"
+            >
+              <div class="featured-service-media moving-service-media">
+                <img
+                  src="media/aegis-services-b2.jpg"
+                  loading="lazy"
+                  decoding="async"
+                  alt=""
+                />
+              </div>
+              <div class="featured-service-copy">
+                <img
+                  class="topic-icon"
+                  src="media/aegis-icons-mobile.png"
+                  alt=""
+                  width="48"
+                  height="48"
+                />
+                <h3>
+                  <a href="consulting.html"
+                    >Information Security Consultation</a
+                  >
+                </h3>
+                <p>
+                  <b>Expert guidance to safeguard your business.</b>
+                  <br />Expert advice and tailored strategies to secure your
+                  business and build lasting resilience.
+                </p>
+                <a class="service-details-link" href="consulting.html"
+                  >View service details</a
+                >
+              </div>
+            </article>
+            <article class="card illustrated-service service-wide">
+              <div class="featured-service-media moving-service-media">
+                <img
+                  src="media/service-assessment-illustration.jpg"
+                  loading="lazy"
+                  decoding="async"
+                  alt=""
+                />
+              </div>
+              <div class="featured-service-copy">
+                <img
+                  class="topic-icon"
+                  src="media/aegis-icons-ux.png"
+                  alt=""
+                  width="48"
+                  height="48"
+                />
+                <h3>
+                  <a href="vulnerability_assessment.html"
+                    >Vulnerability Assessments</a
+                  >
+                </h3>
+                <p>
+                  <b>Identify Risks Before Attackers Do.</b> <br />
+                  Uncover weaknesses, reduce risks, and stay ahead of threats.
+                </p>
+                <a
+                  class="service-details-link"
+                  href="vulnerability_assessment.html"
+                  >View service details</a
+                >
+              </div>
+            </article>
+            <article
+              class="card illustrated-service service-wide service-reversed"
+            >
+              <div class="featured-service-media network-service-media">
+                <img
+                  src="media/service-threat-intelligence-v2.jpg"
+                  loading="lazy"
+                  decoding="async"
+                  alt=""
+                />
+                <div
+                  class="animation network-service-motion"
+                  data-animation="network"
+                  aria-hidden="true"
+                ></div>
+              </div>
+              <div class="featured-service-copy">
+                <img
+                  class="topic-icon"
+                  src="media/aegis-icons-qa.png"
+                  alt=""
+                  width="48"
+                  height="48"
+                />
+                <h3><a href="cti.html">Threat Intelligence and OSINT</a></h3>
+                <p>
+                  <b>Stay Ahead of Emerging Threats</b> <br />Transform
+                  intelligence into action with real-time insights on emerging
+                  threats.
+                </p>
+                <a class="service-details-link" href="cti.html"
+                  >View service details</a
+                >
+              </div>
+            </article>
+            <article class="card illustrated-service service-wide">
+              <div class="featured-service-media moving-service-media">
+                <img
+                  src="media/service-training-illustration.jpg"
+                  loading="lazy"
+                  decoding="async"
+                  alt=""
+                />
+              </div>
+              <div class="featured-service-copy">
+                <img
+                  class="topic-icon"
+                  src="media/aegis-icons-stock.png"
+                  alt=""
+                  width="48"
+                  height="48"
+                />
+                <h3>
+                  <a href="training.html"
+                    >Cybersecurity Awareness and Training</a
+                  >
+                </h3>
+                <p>
+                  <b>Empower Your Team.</b><br />Empower your team to be the
+                  strongest defense against cyber threats.
+                </p>
+                <a class="service-details-link" href="training.html"
+                  >View service details</a
+                >
+              </div>
+            </article>
+            <article
+              class="card illustrated-service service-wide service-reversed"
+            >
+              <div class="featured-service-media ciso-photo">
+                <img
+                  src="media/aegis-services-b11.jpg"
+                  loading="lazy"
+                  decoding="async"
+                  alt=""
+                />
+              </div>
+              <div class="featured-service-copy">
+                <img
+                  class="topic-icon"
+                  src="media/aegis-icons-web.png"
+                  alt=""
+                  width="48"
+                  height="48"
+                />
+                <h3><a href="virtual_ciso.html">Virtual CISO Services</a></h3>
+                <p>
+                  <b>Protecting the Backbone of Your Business</b><br />Strategic
+                  security leadership without the cost of a full-time CISO.
+                </p>
+                <a class="service-details-link" href="virtual_ciso.html"
+                  >View service details</a
+                >
+              </div>
+            </article>
+          </div>
+          <p class="centered">
+            <a class="button outline" href="services.html">All Services</a>
+          </p>
+        </div>
+      </section>
+      <section class="why block why-aegis">
+        <div class="wrap">
+          <div class="centered section-intro">
+            <p class="why-label">
+              <span aria-hidden="true">//</span> Why Choose Us
+            </p>
+            <h2>Our Mission Is To Make Your Business Secure</h2>
+          </div>
+          <div class="why-layout">
+            <div class="why-tiles">
+              <button class="card tile" data-reason="0" type="button">
+                <span aria-hidden="true"
+                  ><img
+                    class="topic-icon"
+                    src="media/aegis-icons-system.svg"
+                    alt=""
+                    width="48"
+                    height="48" /></span
+                >Secure Systems Audit</button
+              ><button class="card tile" data-reason="1" type="button">
+                <span aria-hidden="true"
+                  ><img
+                    class="topic-icon"
+                    src="media/aegis-icons-team.svg"
+                    alt=""
+                    width="48"
+                    height="48" /></span
+                >Threat Alerts &amp; Advisories</button
+              ><button class="card tile" data-reason="2" type="button">
+                <span aria-hidden="true"
+                  ><img
+                    class="topic-icon"
+                    src="media/aegis-icons-desk.svg"
+                    alt=""
+                    width="48"
+                    height="48" /></span
+                >24/7 Supports</button
+              ><button class="card tile" data-reason="3" type="button">
+                <span aria-hidden="true"
+                  ><img
+                    class="topic-icon"
+                    src="media/aegis-icons-expert.svg"
+                    alt=""
+                    width="48"
+                    height="48" /></span
+                >Certified Experts
+              </button>
+            </div>
+            <div id="reasons">
+              <details name="accordion" open>
+                <summary>
+                  <img
+                    class="summary-icon"
+                    src="media/aegis-icons-system.svg"
+                    alt=""
+                    width="48"
+                    height="48"
+                  />Secure Systems Audit
+                </summary>
+                <p>
+                  Design,audit, and maintain systems with security at the core.
+                </p>
+              </details>
+              <details name="accordion">
+                <summary>
+                  <img
+                    class="summary-icon"
+                    src="media/aegis-icons-team.svg"
+                    alt=""
+                    width="48"
+                    height="48"
+                  />Threat Alerts &amp; Advisories
+                </summary>
+                <p>
+                  Stay ahead of cyber risks with timely alerts and guidance.
+                </p>
+              </details>
+              <details name="accordion">
+                <summary>
+                  <img
+                    class="summary-icon"
+                    src="media/aegis-icons-desk.svg"
+                    alt=""
+                    width="48"
+                    height="48"
+                  />24/7 Supports
+                </summary>
+                <p>Round-the-clock support when you need it most.</p>
+              </details>
+              <details name="accordion">
+                <summary>
+                  <img
+                    class="summary-icon"
+                    src="media/aegis-icons-expert.svg"
+                    alt=""
+                    width="48"
+                    height="48"
+                  />Certified Experts
+                </summary>
+                <p>Work with certified professionals you can trust.</p>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="why block consultation-aegis">
+        <div class="wrap centered">
+          <h2>
+            Delivering Cybersecurity Solutions That Enable You to Work Smarter
+          </h2>
+          <p>
+            Appropriate for your specific business, making it easy for you to
+            have quality and Secure services.
+          </p>
+          <a href="contact.html" class="button">Get Started</a>
+        </div>
+      </section>
+      <section
+        id="testimonials"
+        class="block"
+        data-carousel="cards"
+        aria-label="Client testimonials"
+      >
+        <div class="wrap">
+          <div class="centered section-intro">
+            <p class="chip">Testimonials</p>
+            <h2>Trusted by Our Clients</h2>
+          </div>
+          <p class="centered">
+            At Aegis CyberWorks, we deliver trusted cybersecurity solutions that
+            protect data, enhance IT performance, and earn our clients’
+            confidence.
+          </p>
+          <div
+            class="grid carousel-cards"
+            data-carousel-track
+            aria-label="Client testimonials slides"
+          >
+            <figure class="card review">
+              <div class="stars" aria-label="5 out of 5 stars">
+                <span aria-hidden="true">★★★★★</span>
+              </div>
+              <blockquote>
+                “As CEO of Smart Start SL Ltd, I have been impressed with Aegis
+                CyberWorks' professionalism, knowledge base and reliability.
+                They provide excellent cybersecurity support and web services
+                that keep our business secure, efficient and visible. Their team
+                is responsive, knowledgeable, and truly committed to delivering
+                value. I highly recommend them to any organization in need of
+                trusted technology support.”
+              </blockquote>
+              <figcaption>
+                <img
+                  class="portrait"
+                  src="media/aegis-blog-author1.jpg"
+                  loading="lazy"
+                  alt=""
+                /><span
+                  ><strong>Patricia Olayemi Jangah</strong
+                  ><small>CEO, Smart Start SL Ltd</small></span
+                >
+              </figcaption>
+            </figure>
+            <figure class="card review">
+              <div class="stars" aria-label="5 out of 5 stars">
+                <span aria-hidden="true">★★★★★</span>
+              </div>
+              <blockquote>
+                “I am delighted to offer this testimonial for Aegis CyberWorks,
+                a trusted cybersecurity partner with whom we have worked closely
+                for a few years. At Endwell Technology Solutions, our focus is
+                on GPS installation services and specialized technical
+                operations, and safeguarding the data and systems that power our
+                devices is critical. Aegis CyberWorks has consistently provided
+                the cybersecurity expertise, resilience, and innovative
+                protection we need to operate securely. I highly recommend their
+                services.”
+              </blockquote>
+              <figcaption>
+                <img
+                  class="portrait"
+                  src="media/aegis-blog-author2.jpg"
+                  loading="lazy"
+                  alt=""
+                /><span
+                  ><strong>Dennis O O Barber</strong
+                  ><small>CEO, Endwell Technology Solutions</small></span
+                >
+              </figcaption>
+            </figure>
+            <figure class="card review">
+              <div class="stars" aria-label="5 out of 5 stars">
+                <span aria-hidden="true">★★★★★</span>
+              </div>
+              <blockquote>
+                “I'm genuinely impressed with the foundational work Aegis
+                CyberWorks is doing to strengthen digital defenses across Sierra
+                Leone. They don't just provide security; they are actively
+                building national capacity by identifying and training local
+                talent, which creates genuine, long-term digital resilience for
+                the entire region. What I've experienced is that their managed
+                services are technically comprehensive, and smartly tailored to
+                the unique West African context. I can confidently endorse Aegis
+                CyberWorks as a trusted, forward-thinking leader in both
+                cybersecurity service and talent development.”
+              </blockquote>
+              <figcaption>
+                <img
+                  class="portrait"
+                  src="media/aegis-blog-author3.jpg"
+                  loading="lazy"
+                  alt=""
+                /><span
+                  ><strong>Jones Baraza</strong
+                  ><small>Co-founder and CTO, CTFROOM LIMITED</small></span
+                >
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
 
-<section id="news-feed" class="block"><div class="wrap"><div class="centered section-intro"><p class="chip">News Feeds</p><h2>Cybersecurity Article &amp; Insights</h2></div><div class="grid"><article class="card media-card"><div class="home-news-visual"><img class="cover" src="media/aegis-blog-b1.jpg" loading="lazy" alt=""></div><div class="media-copy"><p class="chip">Threat Advisory</p><h3><a href="news-details1.html">Google Patches Chrome Zero-Day CVE-2025-10585 as Active V8 Exploit Threatens Millions</a></h3><p class="byline">Amadu Jalloh · 18th September 2025</p><a href="news-details1.html">Read More</a></div></article>
-<article class="card media-card"><div class="home-news-visual"><img class="cover" src="media/aegis-blog-b2.jpg" loading="lazy" alt=""></div><div class="media-copy"><p class="chip">Threat Advisory</p><h3><a href="news-details2.html">New EDR-Freeze tool uses Windows WER to suspend security software</a></h3><p class="byline">Dorian Collier · 23rd September 2025</p><a href="news-details2.html">Read More</a></div></article>
-<article class="card media-card"><div class="home-news-visual"><img class="cover" src="media/aegis-blog-b3.jpg" loading="lazy" alt=""></div><div class="media-copy"><p class="chip">Our Insight</p><h3><a href="news-details3.html">How to Avoid Common AI Scams</a></h3><p class="byline">Amadu Jalloh · 24th September 2025</p><a href="news-details3.html">Read More</a></div></article></div><p class="centered"><a href="news.html" class="button outline">View All Articles</a></p></div></section>
-<section id="get-in-touch" class="block"><div class="wrap contact-layout"><div><p class="chip">Get In Touch</p><h2>Send Us Message</h2><img class="section-photo" src="media/aegis-contact-img.avif" loading="lazy" alt=""></div><form class="card contact-form" id="inquiry"><h2>Send a Message</h2><div class="form-fields"><label>Full Name<input name="name" autocomplete="name" required></label><label>Email Address<input name="email" type="email" autocomplete="email" required></label><label>Phone Number<input name="phone" type="tel" autocomplete="tel"></label><label>Subject<input name="subject" required></label></div><label>Your Message<textarea name="message" rows="5" required></textarea></label><p>Opens a draft in your email app for you to send.</p><button class="button" type="submit">Open Email Draft</button></form></div></section>
+      <section id="news-feed" class="block">
+        <div class="wrap">
+          <div class="centered section-intro">
+            <p class="chip">News Feeds</p>
+            <h2>Cybersecurity Article &amp; Insights</h2>
+          </div>
+          <div class="grid">
+            <article class="card media-card">
+              <div class="home-news-visual">
+                <img
+                  class="cover"
+                  src="media/aegis-blog-b1.jpg"
+                  loading="lazy"
+                  alt=""
+                />
+              </div>
+              <div class="media-copy">
+                <p class="chip">Threat Advisory</p>
+                <h3>
+                  <a href="news-details1.html"
+                    >Google Patches Chrome Zero-Day CVE-2025-10585 as Active V8
+                    Exploit Threatens Millions</a
+                  >
+                </h3>
+                <p class="byline">Amadu Jalloh · 18th September 2025</p>
+                <a href="news-details1.html">Read More</a>
+              </div>
+            </article>
+            <article class="card media-card">
+              <div class="home-news-visual">
+                <img
+                  class="cover"
+                  src="media/aegis-blog-b2.jpg"
+                  loading="lazy"
+                  alt=""
+                />
+              </div>
+              <div class="media-copy">
+                <p class="chip">Threat Advisory</p>
+                <h3>
+                  <a href="news-details2.html"
+                    >New EDR-Freeze tool uses Windows WER to suspend security
+                    software</a
+                  >
+                </h3>
+                <p class="byline">Dorian Collier · 23rd September 2025</p>
+                <a href="news-details2.html">Read More</a>
+              </div>
+            </article>
+            <article class="card media-card">
+              <div class="home-news-visual">
+                <img
+                  class="cover"
+                  src="media/aegis-blog-b3.jpg"
+                  loading="lazy"
+                  alt=""
+                />
+              </div>
+              <div class="media-copy">
+                <p class="chip">Our Insight</p>
+                <h3>
+                  <a href="news-details3.html">How to Avoid Common AI Scams</a>
+                </h3>
+                <p class="byline">Amadu Jalloh · 24th September 2025</p>
+                <a href="news-details3.html">Read More</a>
+              </div>
+            </article>
+          </div>
+          <p class="centered">
+            <a href="news.html" class="button outline">View All Articles</a>
+          </p>
+        </div>
+      </section>
+      <section id="get-in-touch" class="block">
+        <div class="wrap contact-layout">
+          <div>
+            <p class="chip">Get In Touch</p>
+            <h2>Send Us Message</h2>
+            <img
+              class="section-photo"
+              src="media/aegis-contact-img.avif"
+              loading="lazy"
+              alt=""
+            />
+          </div>
+          <form class="card contact-form" id="inquiry">
+            <h2>Send a Message</h2>
+            <div class="form-fields">
+              <label
+                >Full Name<input
+                  name="name"
+                  autocomplete="name"
+                  required /></label
+              ><label
+                >Email Address<input
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  required /></label
+              ><label
+                >Phone Number<input
+                  name="phone"
+                  type="tel"
+                  autocomplete="tel" /></label
+              ><label>Subject<input name="subject" required /></label>
+            </div>
+            <label
+              >Your Message<textarea
+                name="message"
+                rows="5"
+                required
+              ></textarea>
+            </label>
+            <p>Opens a draft in your email app for you to send.</p>
+            <button class="button" type="submit">Open Email Draft</button>
+          </form>
+        </div>
+      </section>
 
-<section class="office block"><div class="wrap centered"><h2 class="office-title"><svg class="office-pin" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c-4.2 0-8 3.22-8 8.2 0 3.18 2.45 6.92 7.34 11.23.38.33.95.33 1.33 0C17.55 17.12 20 13.38 20 10.2 20 5.22 16.2 2 12 2m0 10c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2"/></svg>Visit Our Office</h2><p class="office-address"><strong>Aegis CyberWorks</strong><br>94 Wilkinson Road, Freetown, Sierra Leone</p><iframe loading="lazy" title="Map of the street address listed by Aegis CyberWorks" src="https://maps.google.com/maps?q=94%20Wilkinson%20Road%2C%20Freetown%2C%20Sierra%20Leone&amp;t=m&amp;output=embed" referrerpolicy="strict-origin-when-cross-origin"></iframe></div></section><section class="block consultation-banner"><div class="wrap centered"><h2>Need Any Consultations or Work Next Projects</h2><p><a class="button" href="contact.html">Contact Us</a></p></div></section></main>
-<footer><div class="wrap"><div class="footer-grid"><div><a href="index.html" class="footer-brand"><img src="media/aegis-logo-footer.png" width="44" alt="Aegis CyberWorks"><strong>Aegis CyberWorks</strong></a><p>Aegis CyberWorks is a leading cybersecurity solutions provider. Whether you’re a startup, enterprise, government agency, or technology innovator, our tailored services protect your digital assets and empower your business to thrive in a secure environment.</p></div><div><h2>Our Services</h2><a href="services.html">All Services</a><a href="consulting.html">Information Security Consultation</a><a href="pentest.html">Penetration Testing</a><a href="mentorship.html">Mentorship</a><a href="vulnerability_assessment.html">Vulnerability Assessments</a><a href="cti.html">Threat Intelligence &amp; OSINT</a><a href="training.html">Cybersecurity Awareness and Training</a><a href="virtual_ciso.html">Virtual CISO Services</a><a href="audits.html">Information System Auditing</a><a href="anti-surveillance.html">Anti-Surveillance</a><a href="edr.html">Endpoint Detection and Response (EDR)</a><a href="ctf.html">Cyber Drills &amp; CTFs</a></div><div><h2>Company</h2><a href="about.html">About Us</a><a href="team.html">Our Team</a><a href="news.html">Articles</a><a href="faq.html">FAQ</a><a href="pricing.html">Pricing</a><a href="projects.html">Case Studies</a><a href="index.html#testimonials">Testimonials</a><a href="index.html#cyber-advocacy">Cyber Advocacy</a></div><div><h2>Contact</h2><a href="contact.html">Contact Us</a><a href="tel:+23278123456">+232 78 123456</a><a href="mailto:info@aegiscyberworks.com">info@aegiscyberworks.com</a><div class="social-links" aria-label="Social and video links"><a href="https://www.linkedin.com/company/aegiscyberworks">LinkedIn</a><a href="https://www.youtube.com/watch?v=E1xkXZs0cAQ">Featured YouTube video</a></div></div></div><div class="footer-bottom">©2025 Aegis CyberWorks, All Rights Reserved</div></div></footer></body></html>
+      <section class="office block">
+        <div class="wrap centered">
+          <h2 class="office-title">
+            <svg
+              class="office-pin"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M12 2c-4.2 0-8 3.22-8 8.2 0 3.18 2.45 6.92 7.34 11.23.38.33.95.33 1.33 0C17.55 17.12 20 13.38 20 10.2 20 5.22 16.2 2 12 2m0 10c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2"
+              /></svg
+            >Visit Our Office
+          </h2>
+          <p class="office-address">
+            <strong>Aegis CyberWorks</strong><br />94 Wilkinson Road, Freetown,
+            Sierra Leone
+          </p>
+          <iframe
+            loading="lazy"
+            title="Map of the street address listed by Aegis CyberWorks"
+            src="https://maps.google.com/maps?q=94%20Wilkinson%20Road%2C%20Freetown%2C%20Sierra%20Leone&amp;t=m&amp;output=embed"
+            referrerpolicy="strict-origin-when-cross-origin"
+          ></iframe>
+        </div>
+      </section>
+      <section class="block consultation-banner">
+        <div class="wrap centered">
+          <h2>Need Any Consultations or Work Next Projects</h2>
+          <p><a class="button" href="contact.html">Contact Us</a></p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <a href="index.html" class="footer-brand"
+              ><img
+                src="media/aegis-logo-footer.png"
+                width="44"
+                alt="Aegis CyberWorks"
+              /><strong>Aegis CyberWorks</strong></a
+            >
+            <p>
+              Aegis CyberWorks is a leading cybersecurity solutions provider.
+              Whether you’re a startup, enterprise, government agency, or
+              technology innovator, our tailored services protect your digital
+              assets and empower your business to thrive in a secure
+              environment.
+            </p>
+          </div>
+          <div>
+            <h2>Our Services</h2>
+            <a href="services.html">All Services</a
+            ><a href="consulting.html">Information Security Consultation</a
+            ><a href="pentest.html">Penetration Testing</a
+            ><a href="mentorship.html">Mentorship</a
+            ><a href="vulnerability_assessment.html"
+              >Vulnerability Assessments</a
+            ><a href="cti.html">Threat Intelligence &amp; OSINT</a
+            ><a href="training.html">Cybersecurity Awareness and Training</a
+            ><a href="virtual_ciso.html">Virtual CISO Services</a
+            ><a href="audits.html">Information System Auditing</a
+            ><a href="anti-surveillance.html">Anti-Surveillance</a
+            ><a href="edr.html">Endpoint Detection and Response (EDR)</a
+            ><a href="ctf.html">Cyber Drills &amp; CTFs</a>
+          </div>
+          <div>
+            <h2>Company</h2>
+            <a href="about.html">About Us</a><a href="team.html">Our Team</a
+            ><a href="news.html">Articles</a><a href="faq.html">FAQ</a
+            ><a href="pricing.html">Pricing</a
+            ><a href="projects.html">Case Studies</a
+            ><a href="index.html#testimonials">Testimonials</a
+            ><a href="index.html#cyber-advocacy">Cyber Advocacy</a>
+          </div>
+          <div>
+            <h2>Contact</h2>
+            <a href="contact.html">Contact Us</a
+            ><a href="tel:+23278123456">+232 78 123456</a
+            ><a href="mailto:info@aegiscyberworks.com"
+              >info@aegiscyberworks.com</a
+            >
+            <div class="social-links" aria-label="Social and video links">
+              <a href="https://www.linkedin.com/company/aegiscyberworks"
+                >LinkedIn</a
+              ><a href="https://www.youtube.com/watch?v=E1xkXZs0cAQ"
+                >Featured YouTube video</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          ©2025 Aegis CyberWorks, All Rights Reserved
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
