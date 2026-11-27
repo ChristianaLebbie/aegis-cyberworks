@@ -2437,7 +2437,7 @@ header .header-actions a[aria-current] {
 .footer-more summary {
   color: var(--accent);
 }
-@media (min-width: 900px) {
+@media (width > 600px) {
   .footer-grid .footer-group {
     border: 0;
   }
