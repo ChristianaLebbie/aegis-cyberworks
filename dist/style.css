@@ -2320,3 +2320,21 @@ header .header-actions a[aria-current] {
     opacity: 1;
   }
 }
+
+.legal-page h1::after {
+  content: "";
+  display: block;
+  width: 3.5rem;
+  height: 0.25rem;
+  margin-top: 0.5rem;
+  border-radius: 999px;
+  background: var(--accent);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .legal-page > :is(h1, h2) {
+    animation: hero-metric-in 0.85s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .legal-page h1::after {
+    animation: process-sway 4s ease-in-out infinite alternate;
+  }
+}
