@@ -480,11 +480,31 @@ footer {
   grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
   gap: 24px;
 }
-.footer-grid h2 {
-  font:
-    700 1rem Inter,
-    sans-serif;
-  margin-bottom: 12px;
+.footer-group {
+  min-width: 0;
+  align-self: start;
+  border-bottom: 1px solid var(--line);
+}
+.footer-group summary {
+  min-height: 44px;
+  padding-block: 0.7rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.footer-group summary::marker {
+  color: var(--accent);
+}
+.footer-group summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.footer-links {
+  padding: 0.25rem 0 0.65rem;
+}
+@media (max-width: 600px) {
+  .footer-grid .footer-group {
+    grid-column: 1 / -1;
+  }
 }
 .footer-grid a:not(.footer-brand) {
   display: block;
