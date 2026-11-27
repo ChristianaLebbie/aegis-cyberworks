@@ -2492,3 +2492,9 @@ header .header-actions a[aria-current] {
     transition: opacity 0.45s ease;
   }
 }
+
+@media (max-width: 600px) {
+  .with-photo-background:not(.consultation-banner) > .section-photo-background {
+    display: none;
+  }
+}
