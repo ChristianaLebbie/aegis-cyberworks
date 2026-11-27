@@ -2448,3 +2448,47 @@ header .header-actions a[aria-current] {
     padding: 0;
   }
 }
+
+.with-photo-background {
+  position: relative;
+  isolation: isolate;
+}
+.with-photo-background:is(
+  .why-aegis,
+  .consultation-aegis,
+  .consultation-banner
+) {
+  background-image: none;
+}
+.section-photo-background,
+.section-photo-track,
+.section-photo-track img {
+  position: absolute;
+  inset: 0;
+}
+.section-photo-background {
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0.14;
+}
+.consultation-banner .section-photo-background {
+  opacity: 0.29;
+  mask-image: linear-gradient(90deg, #000, #0007 50%, #000);
+}
+.section-photo-track img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.section-photo-track.photos-ready img {
+  opacity: 0;
+}
+.section-photo-track.photos-ready .current-photo {
+  opacity: 1;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .section-photo-track.photos-ready img {
+    transition: opacity 0.45s ease;
+  }
+}
