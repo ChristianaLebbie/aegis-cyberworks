@@ -305,3 +305,13 @@ if (pageRoute === "index") {
   );
   addEventListener("resize", highlightNavigation);
 }
+
+const footerGroups = document.querySelectorAll(".footer-group");
+const compactFooter = matchMedia("(max-width: 600px)");
+function updateFooterGroups() {
+  for (const group of footerGroups) {
+    group.open = !compactFooter.matches;
+  }
+}
+compactFooter.addEventListener("change", updateFooterGroups);
+updateFooterGroups();
