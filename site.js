@@ -40,6 +40,17 @@ document.addEventListener("keydown", (event) => {
   }
 });
 const header = document.querySelector("header");
+navigation.addEventListener("click", (event) => {
+  if (event.target.closest("a")) setMenu(false);
+});
+document.addEventListener("click", (event) => {
+  if (
+    !header.contains(event.target) &&
+    menu.getAttribute("aria-expanded") === "true"
+  ) {
+    setMenu(false);
+  }
+});
 function updateHeader() {
   header.classList.toggle("scrolled", scrollY > 32);
 }

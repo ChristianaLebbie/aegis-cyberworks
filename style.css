@@ -2338,3 +2338,72 @@ header .header-actions a[aria-current] {
     animation: process-sway 4s ease-in-out infinite alternate;
   }
 }
+
+@media (max-width: 600px) {
+  .bar {
+    width: calc(100% - 24px);
+    padding-inline: 12px;
+  }
+  #menu {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  #navigation {
+    inset: calc(100% + 6px) 0 auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4px;
+    max-height: calc(100dvh - 80px);
+    overflow-y: auto;
+    box-shadow: 0 12px 28px rgb(0 0 0 / 0.15);
+  }
+  #navigation a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0.45rem 0.65rem;
+  }
+  .hero {
+    padding-block: 82px 28px;
+  }
+  .hero-layout {
+    gap: 16px;
+  }
+  .hero-media {
+    width: min(100%, 340px);
+    margin-inline: auto;
+    padding-bottom: 0.5rem;
+  }
+  .hero .actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+  .hero .actions .button {
+    min-height: 44px;
+    padding: 0.5rem 0.7rem;
+    font-size: 0.875rem;
+  }
+  .hero .metrics {
+    gap: 8px;
+  }
+  .hero .metrics > div {
+    min-width: 0;
+    flex: 1;
+  }
+  .hero .metrics span {
+    font-size: 0.75rem;
+  }
+  .block {
+    padding-block: 32px;
+  }
+  .footer-grid {
+    gap: 1.25rem 0.875rem;
+  }
+  .footer-grid > :first-child,
+  .footer-grid > :last-child {
+    grid-column: 1 / -1;
+  }
+  .footer-grid a {
+    overflow-wrap: anywhere;
+  }
+}
