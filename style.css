@@ -2441,6 +2441,13 @@ header .header-actions a[aria-current] {
   .footer-grid .footer-group {
     border: 0;
   }
+  .footer-more {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+  }
   .footer-more summary {
     display: none;
   }
@@ -2490,11 +2497,5 @@ header .header-actions a[aria-current] {
 @media (prefers-reduced-motion: no-preference) {
   .section-photo-track.photos-ready img {
     transition: opacity 0.45s ease;
-  }
-}
-
-@media (max-width: 600px) {
-  .with-photo-background:not(.consultation-banner) > .section-photo-background {
-    display: none;
   }
 }
