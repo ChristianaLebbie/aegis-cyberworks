@@ -306,8 +306,8 @@ if (pageRoute === "index") {
   addEventListener("resize", highlightNavigation);
 }
 
-const footerGroups = document.querySelectorAll(".footer-group");
-const compactFooter = matchMedia("(max-width: 600px)");
+const footerGroups = document.querySelectorAll(".footer-more");
+const compactFooter = matchMedia("(max-width: 899px)");
 function updateFooterGroups() {
   for (const group of footerGroups) {
     group.open = !compactFooter.matches;

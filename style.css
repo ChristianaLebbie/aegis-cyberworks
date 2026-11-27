@@ -485,16 +485,16 @@ footer {
   align-self: start;
   border-bottom: 1px solid var(--line);
 }
-.footer-group summary {
+.footer-more summary {
   min-height: 44px;
   padding-block: 0.7rem;
   font-weight: 700;
   cursor: pointer;
 }
-.footer-group summary::marker {
+.footer-more summary::marker {
   color: var(--accent);
 }
-.footer-group summary:focus-visible {
+.footer-more summary:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
@@ -2428,22 +2428,21 @@ header .header-actions a[aria-current] {
   }
 }
 
-.footer-desktop-heading {
-  display: none;
+.footer-group h2 {
+  font:
+    700 1rem Inter,
+    sans-serif;
+  margin-bottom: 12px;
 }
-@media (min-width: 601px) {
+.footer-more summary {
+  color: var(--accent);
+}
+@media (min-width: 900px) {
   .footer-grid .footer-group {
     border: 0;
   }
-  .footer-group summary {
+  .footer-more summary {
     display: none;
-  }
-  .footer-desktop-heading {
-    display: block;
-    font:
-      700 1rem Inter,
-      sans-serif;
-    margin-bottom: 12px;
   }
   .footer-links {
     padding: 0;
